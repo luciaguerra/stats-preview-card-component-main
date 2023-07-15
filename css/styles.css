@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(233, 47%, 7%);
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: hsl(244, 38%, 16%);
+    max-width: 75%;
+    border-radius: 0.5em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.grid-1 { grid-area: 1 / 1 / 2 / 2; }
+.grid-2 { grid-area: 1 / 2 / 2 / 3; }
+
+.container {
+    padding: 3rem;
+}
+
+h1 {
+    padding: 0 0 1.5rem;
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+h4 + p {
+    font-size: 0.8rem;
+}
+
+body,
+.stat-numbers {
+    color: white;
+}
+
+.heading {
+    color: hsl(277, 64%, 61%);
+}
+
+.stats {
+    font-family: 'Lexend Deca', sans-serif;
+    text-transform: uppercase;
+
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.grid-2 {
+    object-fit: contain;
+}
+
+img {
+    width: 100%;
+}
+
+.attribution {
+    font-size: 11px; text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
