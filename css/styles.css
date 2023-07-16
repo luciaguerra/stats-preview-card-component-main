@@ -34,7 +34,7 @@ main {
     width: 50%;
 }
 
-body, main, .container, .grid-2 {
+body, main, .container, .grid-2, .stats {
     display: flex;
 
 }
@@ -45,18 +45,26 @@ body, .container {
 
 h1 {
     padding: 0 0 1.5rem;
+    line-height: 1.2;
 }
 
 p {
-    color: hsla(0, 0%, 100%, 0.75);
+    color: hsla(0, 0%, 100%, 0.539);
+    line-height: 1.7;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: bold;
 }
 
 h4 + p {
     font-size: 0.6rem;
+    margin: 0.2rem 0;
 }
 
-body,
-.stat-numbers {
+body, h4 {
     color: white;
 }
 
@@ -65,13 +73,14 @@ body,
 }
 
 .stats {
-    font-family: 'Lexend Deca', sans-serif;
-    text-transform: uppercase;
-
     width: 90%;
-    display: flex;
     justify-content: space-between;
     padding: 3rem 0 0;
+}
+
+.stat-numbers {
+    font-family: 'Lexend Deca', sans-serif;
+    text-transform: uppercase;
 }
 
 .grid-2 {
@@ -84,7 +93,10 @@ img {
     object-fit: cover;
     mix-blend-mode: multiply;
     opacity: 70%;
-    
+}
+
+.img-mobile {
+    display: none;
 }
 
 .attribution {
@@ -95,23 +107,92 @@ img {
     color: hsl(228, 45%, 44%);
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 960px), (min-width: 1000px) and (max-height: 800px) {
     main, .container {
         width: 70%;
     }
 }
 
-@media screen and (min-width: 720px) and (max-width: 960px) {
+@media screen and (min-width: 820px) and (max-width: 960px) {
     main, .container {
         width: 80%;
     }
+
+    .img-mobile {
+        display: none;
+    }
+    
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 820px) and (min-height: 700px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        text-align: center;
+        max-height: 60%;
+    }
+    
     main {
-        width: 90%;
+        width: 80%;
         display: flex;
         flex-direction: column-reverse;
     }
+    
+    h1, h4 {
+        font-size: 1.8rem;
+    }
+    
+    h1 + p {
+        font-size: 1.2rem;
+    }
+    
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .img-desktop {
+        display: none;
+    }
+    
+    .img-mobile {
+        display: block;
+    }
+    
+    .stat-numbers {
+        font-size: 0.7rem;
+        padding: 0 0 1rem;
+    }
+    
+    .grid-1 {
+        padding: 2.6rem 3rem 0.5rem;
+        justify-content: center;
+    }
+    
+    .stats {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .grid-1, .stats {
+        width: 100%;
+    }
 }
 
+@media screen and (max-width: 460px) and (min-height: 600px), (min-width: 200px) and (max-height: 800px) {
+    body {
+        width: 100%;
+    }
+
+    .stats {
+        flex-direction: column;
+        padding: 1.65rem 0 0;
+    }
+
+    .grid-1 {
+        padding: 2.6rem 2rem 0.5rem;
+    }
+}
