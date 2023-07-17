@@ -51,7 +51,7 @@ h1 {
 }
 
 h1 + p {
-    margin: 0.7rem 0;
+    margin: 2rem 0;
 }
 
 p {
@@ -112,6 +112,12 @@ img {
     color: hsl(228, 45%, 44%);
 }
 
+@media screen and (min-width: 1200px) {
+    main {
+        max-width: 60%;
+    }
+}
+
 @media screen and (min-width: 960px), (min-width: 1000px) and (max-height: 800px) {
     main, .container {
         width: 70%;
@@ -125,22 +131,21 @@ img {
     }
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     h1 + p {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     .container {
-        width: 60%;
+        width: 70%;
         max-height: 60%;
-        padding: 2rem 1.5rem;
+        padding: 2rem;
     }
 
     .stats {
-        width: 100%;
-        padding: 1rem 0 0.5rem;
+        width: 90%;
         justify-content: space-between;
     }
 
@@ -186,6 +191,7 @@ img {
     
     h1 + p {
         font-size: 1rem;
+        margin: 1rem 0;
     }
     
     img {
@@ -206,7 +212,7 @@ img {
     }
     
     .grid-1 {
-        padding: 2rem 1.5rem 0.5rem;
+        padding: 1.5rem;
         justify-content: center;
     }
     
@@ -221,6 +227,10 @@ img {
 }
 
 @media screen and (max-width: 460px) and (min-height: 600px) {
+    * {
+        margin: 0;
+    }
+
     main {
         width: 90%;
         max-height: 90%;
@@ -232,6 +242,7 @@ img {
 
     h1 + p {
         font-size: 1rem;
+        margin: 1rem 0;
     }
 
     h4 {
@@ -243,7 +254,7 @@ img {
     }
 
     .grid-1 {
-        padding: 1.5rem 1rem 0.5rem;
+        padding: 1.5rem 1rem;
     }
 
 }
