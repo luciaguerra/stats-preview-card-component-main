@@ -37,7 +37,7 @@ main {
     width: 50%;
 }
 
-body, main, .container, .grid-1, .grid-2, .stats {
+body, main, .container, .grid-1, .grid-2, .stats, .attribution {
     display: flex;
 
 }
@@ -94,7 +94,7 @@ body, h4 {
 }
 
 img {
-    height: 100%;
+    width: 100%;
     object-fit: cover;
     mix-blend-mode: multiply;
     opacity: 70%;
@@ -102,14 +102,6 @@ img {
 
 .img-mobile {
     display: none;
-}
-
-.attribution {
-    font-size: 11px; text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
 }
 
 @media screen and (min-width: 1200px) {
@@ -147,10 +139,6 @@ img {
     .stats {
         width: 90%;
         justify-content: space-between;
-    }
-
-    .stat-numbers {
-        padding-right: 1rem;
     }
 
     h4 {
@@ -233,7 +221,7 @@ img {
 
     main {
         width: 90%;
-        max-height: 90%;
+        max-height: 98%;
     }
 
     h1 {
@@ -254,13 +242,16 @@ img {
     }
 
     .grid-1 {
-        padding: 1.5rem 1rem;
+        padding: 1.5rem;
     }
 
     .stats {
         flex-direction: column;
     }
 
+    .stat-numbers {
+    margin: 0 0 0.65rem;
+    }
 }
 
 @media screen and (min-width: 200px) and (max-width: 360px) {
